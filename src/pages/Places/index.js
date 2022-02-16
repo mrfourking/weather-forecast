@@ -1,32 +1,51 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Tabpanel from '../../сomponent/TabPanel';
+import Tabpanel from '../../сomponents/TabPanel';
+import { Typography } from '@mui/material';
 
-const Cities = ({
-  citiesList
+const Places = ({
+  citiesList,
+  coordsList,
+  tabValue
 }) => {
 
   return (
     <div>
-      <Tabpanel value={value} index={0}>
-        Item One
+      <Tabpanel value={tabValue} index={0}>
+        {
+          citiesList.length > 0 ? (
+            <Typography variant='h2' align='center'>
+              Есть выбранные города
+            </Typography>
+          ) : (
+            <Typography variant='h4' align='center'>
+              Нет выбранных городов
+            </Typography>
+          )
+        }
       </Tabpanel>
-      <Tabpanel value={value} index={1}>
-        Item Two
+      <Tabpanel value={tabValue} index={1}>
+        {
+          coordsList.length > 0 ? (
+            <Typography variant='h2' align='center'>
+              Есть сохраненные координаты
+            </Typography>
+          ) : (
+            <Typography variant='h4' align='center'>
+              Нет сохраненных координат
+            </Typography>
+          )
+        }
       </Tabpanel>
-      {
-        citiesList.length > 0 ? (
-          <h2>Список городов</h2>
-        ) : (
-          <p>Нет выбранных городов</p>
-        )
-      }
+
     </div>
   );
 };
 
-Cities.propTypes = {
-  citiesList: PropTypes.array
+Places.propTypes = {
+  citiesList: PropTypes.array,
+  coordsList: PropTypes.array,
+  tabValue: PropTypes.number.isRequired
 };
 
-export default Cities;
+export default Places;

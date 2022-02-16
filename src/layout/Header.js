@@ -1,9 +1,11 @@
 import { Box, Container, Grid, Tab, Tabs } from '@mui/material';
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Header = () => {
-  const [tabValue, setTabValue] = useState(0);
-
+const Header = ({
+  tabValue, 
+  setTabValue
+}) => {
   const handleChange = (event, newValue) => {
     setTabValue(newValue);
   };
@@ -35,6 +37,11 @@ const Header = () => {
       </Box>
     </Grid>
   );
+};
+
+Header.propTypes = {
+  tabValue: PropTypes.number.isRequired,
+  setTabValue: PropTypes.func.isRequired
 };
 
 export default Header;

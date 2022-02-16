@@ -5,10 +5,12 @@ import { Routes, Route } from 'react-router-dom';
 import Footer from '../layout/Footer';
 import Header from '../layout/Header';
 import Page from '../layout/Page';
-import Cities from '../pages/Places';
+import Places from '../pages/Places';
 
 const App = () => {
   const [cities] = useState([]);
+  const [coords] = useState([]);
+  const [tabValue, setTabValue] = useState(0);
   return (
     <Grid
       container
@@ -18,7 +20,7 @@ const App = () => {
       }}
     >
       <Grid item xs={12}>
-        <Header />
+        <Header tabValue={tabValue} setTabValue={setTabValue} />
       </Grid>
       <Grid
         item
@@ -29,7 +31,7 @@ const App = () => {
       >
         <Page>
           <Routes>
-            <Route path='/' element={<Cities citiesList={cities} />} />
+            <Route path='/' element={<Places citiesList={cities} coordsList={coords} tabValue={tabValue} />} />
             {/* <Route path='about' /> */}
           </Routes>
         </Page>
