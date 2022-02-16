@@ -10,11 +10,23 @@ import Cities from '../pages/Cities';
 const App = () => {
   const [cities] = useState([]);
   return (
-    <Grid container>
+    <Grid
+      container
+      direction='column'
+      sx={{
+        minHeight: '100vh'
+      }}
+    >
       <Grid item xs={12}>
         <Header />
       </Grid>
-      <Grid item xs={12}>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          flexGrow: 1
+        }}
+      >
         <Page>
           <Routes>
             <Route path='/' element={<Cities citiesList={cities} />} />
