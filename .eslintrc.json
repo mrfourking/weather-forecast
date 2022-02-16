@@ -4,7 +4,6 @@
         "es2021": true
     },
     "extends": [
-        "standard-with-typescript",
         "standard-jsx",
         "standard-react"
     ],
@@ -19,8 +18,22 @@
         "react"
     ],
     "rules": {
+        "indent": [2, 2, {"SwitchCase": 1}],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
         "react/react-in-jsx-scope": "off",
         "spaced-comment": "off",
-        "camelcase": "warn"
+        "camelcase": "warn",
+        "react/prop-types": "warn"
     }
 }

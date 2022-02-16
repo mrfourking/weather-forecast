@@ -1,11 +1,18 @@
+
 import React from 'react';
+import PropTypes from 'prop-types';
+import { Container } from '@mui/material';
 
 const Page = ({ children }) => {
   return (
-    <div>
+    <Container>
       {children}
-    </div>
-  )
+    </Container>
+  );
+};
+
+Page.propTypes = {
+  children: PropTypes.any
 };
 
 export default Page;

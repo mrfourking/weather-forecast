@@ -1,11 +1,32 @@
+
+import { Grid } from '@mui/material';
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Footer from '../layout/Footer';
+import Header from '../layout/Header';
 import Page from '../layout/Page';
+import Cities from '../pages/Cities';
 
 const App = () => {
+  const [cities] = useState([]);
   return (
-    <Page>
-      <h1>Weather-Forecast</h1>
-    </Page>
+    <Grid container>
+      <Grid item xs={12}>
+        <Header />
+      </Grid>
+      <Grid item xs={12}>
+        <Page>
+          <Routes>
+            <Route path='/' element={<Cities citiesList={cities} />} />
+            {/* <Route path='about' /> */}
+          </Routes>
+        </Page>
+      </Grid>
+      <Grid item xs={12}>
+        <Footer />
+      </Grid>
+    </Grid>
   );
-}
+};
 
 export default App;
