@@ -14,7 +14,7 @@ const Places = ({
       <Tabpanel value={tabValue} index={0}>
         {
           citiesList.length > 0 ? (
-            <Typography variant='h2' align='center'>
+            <Typography variant='h4' align='center'>
               Есть выбранные города
             </Typography>
           ) : (
@@ -27,7 +27,7 @@ const Places = ({
       <Tabpanel value={tabValue} index={1}>
         {
           coordsList.length > 0 ? (
-            <Typography variant='h2' align='center'>
+            <Typography variant='h4' align='center'>
               Есть сохраненные координаты
             </Typography>
           ) : (
