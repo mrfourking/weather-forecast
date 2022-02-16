@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Footer from '../layout/Footer';
 import Header from '../layout/Header';
 import Page from '../layout/Page';
-import Cities from '../pages/Cities';
+import Cities from '../pages/Places';
 
 const App = () => {
   const [cities] = useState([]);
