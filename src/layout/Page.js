@@ -5,7 +5,12 @@ import { Container } from '@mui/material';
 
 const Page = ({ children }) => {
   return (
-    <Container>
+    <Container sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      flexGrow: 1
+    }}
+    >
       {children}
     </Container>
   );

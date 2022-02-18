@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import Typography from '@mui/material/Typography';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+
 import Tabpanel from '../../сomponents/TabPanel';
-import { Typography } from '@mui/material';
 
 const Places = ({
   citiesList,
@@ -10,7 +14,7 @@ const Places = ({
 }) => {
 
   return (
-    <div>
+    <>
       <Tabpanel value={tabValue} index={0}>
         {
           citiesList.length > 0 ? (
@@ -37,8 +41,18 @@ const Places = ({
           )
         }
       </Tabpanel>
-
-    </div>
+      <Fab
+        color='primary'
+        aria-label='add'
+        sx={{
+          position: 'fixed',
+          bottom: 96,
+          right: 16,
+        }}
+      >
+        <AddIcon />
+      </Fab>
+    </>
   );
 };
 

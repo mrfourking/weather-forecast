@@ -2,6 +2,8 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './style.module.css';
+
 const Tabpanel = ({
   value,
   index,
@@ -9,6 +11,7 @@ const Tabpanel = ({
 }) => {
   return (
     <div
+      className={styles.tabPanel}
       role='tabpanel'
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}

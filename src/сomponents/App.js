@@ -1,7 +1,8 @@
-
-import { Grid } from '@mui/material';
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+
+import Grid from '@mui/material/Grid'; 
+
 import Footer from '../layout/Footer';
 import Header from '../layout/Header';
 import Page from '../layout/Page';
@@ -26,6 +27,8 @@ const App = () => {
         item
         xs={12}
         sx={{
+          display: 'flex',
+          flexDirection: 'column',
           flexGrow: 1
         }}
       >

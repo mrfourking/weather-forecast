@@ -1,6 +1,12 @@
-import { Box, Container, Grid, Tab, Tabs } from '@mui/material';
+
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
 
 const Header = ({
   tabValue, 
